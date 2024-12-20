@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Guidance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://media.istockphoto.com/id/1324905403/photo/landscaping-questions.jpg?s=2048x2048&w=is&k=20&c=fRs1CNK4RSf1Dj8K262ndVPNnpcXwlxkEFCt1V0ocMw=');
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #2a7a2a;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #2a7a2a;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            margin-top: auto; /* Ensures footer is always at the bottom */
+        }
+        .container {
+            padding: 20px;
+            flex: 1;
+            overflow-y: auto;
+        }
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+        }
+        textarea {
+            resize: none;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        button {
+            background-color: #2a7a2a;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #216321;
+        }
+        .chatbot-response {
+            margin-top: 20px;
+        }
+        .response-text {
+            background: #e9f7e9;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .email-suggestion {
+            display: none;
+            color: #2a7a2a;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Farmer Innovation Management</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="sell.html">Sell Crops</a>
+            <a href="buy.html">Buy Inputs</a>
+            <a href="guidance.html">Expert Guidance</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2>Ask the Experts</h2>
+            <div class="form-container">
+                <label for="question">Your Question:</label>
+                <textarea id="question" name="question" rows="4" placeholder="Ask your farming-related question here..." required></textarea>
+                <button type="button" id="submit-question">Submit</button>
+            </div>
+
+            <div class="chatbot-response" id="response-container">
+                <!-- Chatbot's response will be shown here -->
+            </div>
+
+            <div class="email-suggestion" id="email-suggestion">
+                <p>If you're not satisfied with the answer, please contact us at <a href="mailto:support@farmerinnovation.com">support@farmerinnovation.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Farmer Innovation Management
+    </footer>
+
+    <script>
+        document.getElementById('submit-question').addEventListener('click', function() {
+            const question = document.getElementById('question').value.trim();
+            const responseContainer = document.getElementById('response-container');
+            const emailSuggestion = document.getElementById('email-suggestion');
+
+            if (question === "") {
+                responseContainer.innerHTML = "<p>Please enter a question.</p>";
+                return;
+            }
+
+            // Simple chatbot logic
+            let answer = "I'm not sure about that.";
+            if (question.toLowerCase().includes("fertilizer")) {
+                answer = "Fertilizers are essential for soil enrichment. You can find them in the 'Buy Inputs' section.";
+            } else if (question.toLowerCase().includes("seeds")) {
+                answer = "Seeds vary depending on the crop. Please check the seed options in the 'Buy Inputs' section.";
+            } else if (question.toLowerCase().includes("pesticide")) {
+                answer = "We offer a variety of pesticides in our shop to help with pest control.";
+            } else if (question.toLowerCase().includes("soil")) {
+                answer = "Soil improvement products like manure and soil enhancers are available in our shop.";
+            }
+
+            responseContainer.innerHTML = `<div class="response-text">${answer}</div><button id="not-satisfied" style="background-color: red; color: white;">Not Satisfied? Contact Us</button>`;
+
+            // Show the email suggestion if user is not satisfied
+            document.getElementById('not-satisfied').addEventListener('click', function() {
+                emailSuggestion.style.display = 'block';
+                responseContainer.innerHTML = ""; // Clear the response after contacting suggestion
+            });
+        });
+    </script>
+</body>
+</html>

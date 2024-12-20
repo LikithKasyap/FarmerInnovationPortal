@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Crops</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://img.freepik.com/free-photo/sunny-meadow-landscape_1112-134.jpg?t=st=1734711778~exp=1734715378~hmac=2d981baf9239fb3147db641057a013963e2ae6d54c0af204a7364bebe9da1a6f&w=1060') no-repeat center center fixed;            background-size: cover;
+            color: #333;
+        }
+        header {
+            background-color: #2a7a2a;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #2a7a2a;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        form label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        form button {
+            background-color: #2a7a2a;
+            color: white;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #216621;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sell Crops</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="sell.html">Sell Crops</a>
+            <a href="buy.html">Buy Inputs</a>
+            <a href="guidance.html">Expert Guidance</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2>Post Your Crops for Sale</h2>
+            <form>
+                <label for="crop-name">Crop Name:</label>
+                <input type="text" id="crop-name" name="crop-name" placeholder="Enter the crop name" required>
+
+                <label for="crop-variety">Variety:</label>
+                <input type="text" id="crop-variety" name="crop-variety" placeholder="Enter the variety" required>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" placeholder="Describe your crop" required></textarea>
+
+                <label for="quantity">Quantity (in kg):</label>
+                <input type="number" id="quantity" name="quantity" placeholder="Enter the quantity" required>
+
+                <label for="price">Price per kg:</label>
+                <input type="number" id="price" name="price" placeholder="Enter the price per kg" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Farmer Innovation Management
+    </footer>
+</body>
+</html>

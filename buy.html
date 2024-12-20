@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Inputs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
+            background-image: url('https://media.gettyimages.com/id/1318237749/photo/female-farm-worker-using-digital-tablet-with-virtual-reality-artificial-intelligence-for.jpg?s=1024x1024&w=gi&k=20&c=eHHHkllsAfFaD7q_M-1GUeZ1OGHb2pBp1Z8_15ytxLk='); /* Add your background image URL here */
+            background-size: cover;
+            background-position: center;
+        }
+        header {
+            background-color: #2a7a2a;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            overflow-y: scroll;
+            max-height: 80vh;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.8); /* Transparent card */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            height: 350px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+        .card p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        .card .price {
+            font-weight: bold;
+            color: #2a7a2a;
+            font-size: 18px;
+        }
+        .card button {
+            background-color: #2a7a2a;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .card button:hover {
+            background-color: #216321;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #2a7a2a;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Buy Inputs</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="sell.html">Sell Crops</a>
+            <a href="buy.html">Buy Inputs</a>
+            <a href="guidance.html">Expert Guidance</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <!-- Example of a product card, repeat it 16 times with unique data -->
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200.png?text=Fertilizer" alt="Fertilizer">
+            <h3>Fertilizer X</h3>
+            <p>Description: High-quality fertilizer for better yield.</p>
+            <p>Company: AgriCorp</p>
+            <p class="price">₹1,500</p>
+            <button>Buy</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200.png?text=Seed" alt="Seed">
+            <h3>Seed A</h3>
+            <p>Description: Premium seeds for vegetables and fruits.</p>
+            <p>Company: SeedGrow</p>
+            <p class="price">₹800</p>
+            <button>Buy</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200.png?text=Pesticide" alt="Pesticide">
+            <h3>Pesticide B</h3>
+            <p>Description: Effective pesticide for pest control.</p>
+            <p>Company: PestControl Ltd.</p>
+            <p class="price">₹650</p>
+            <button>Buy</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200.png?text=Soil" alt="Soil Enhancer">
+            <h3>Soil Enhancer</h3>
+            <p>Description: Improve soil fertility and structure.</p>
+            <p>Company: SoilTech</p>
+            <p class="price">₹1,200</p>
+            <button>Buy</button>
+        </div>
+        
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200.png?text=Farming+Tools" alt="Farming Tools">
+            <h3>Farming Tools Set</h3>
+            <p>Description: A set of essential farming tools.</p>
+            <p>Company: FarmTools Inc.</p>
+            <p class="price">₹3,000</p>
+            <button>Buy</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200.png?text=Irrigation+System" alt="Irrigation System">
+            <h3>Irrigation System</h3>
+            <p>Description: Efficient irrigation for large fields.</p>
+            <p>Company: IrrigateTech</p>
+            <p class="price">₹15,000</p>
+            <button>Buy</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200.png?text=Harvester" alt="Harvester">
+            <h3>Harvester Machine</h3>
+            <p>Description: Heavy-duty machine for crop harvesting.</p>
+            <p>Company: AgroTech</p>
+            <p class="price">₹5,50,000</p>
+            <button>Buy</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200.png?text=Tractor" alt="Tractor">
+            <h3>Tractor Model X</h3>
+            <p>Description: Powerful tractor for field work.</p>
+            <p>Company: FarmEquip</p>
+            <p class="price">₹6,00,000</p>
+            <button>Buy</button>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200.png?text=Manure" alt="Manure">
+            <h3>Organic Manure</h3>
+            <p>Description: Natural manure for organic farming.</p>
+            <p>Company: GreenFarms</p>
+            <p class="price">₹500</p>
+            <button>Buy</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200.png?text=Herbicide" alt="Herbicide">
+            <h3>Herbicide Z</h3>
+            <p>Description: Efficient herbicide for weed control.</p>
+            <p>Company: AgriTech</p>
+            <p class="price">₹700</p>
+            <button>Buy</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200.png?text=Compost" alt="Compost">
+            <h3>Compost Fertilizer</h3>
+            <p>Description: Organic compost for enriching soil.</p>
+            <p>Company: EcoGrow</p>
+            <p class="price">₹350</p>
+            <button>Buy</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200.png?text=Hydroponics" alt="Hydroponic System">
+            <h3>Hydroponic System</h3>
+            <p>Description: Efficient soil-less farming system.</p>
+            <p>Company: HydroFarms</p>
+            <p class="price">₹20,000</p>
+            <button>Buy</button>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200.png?text=Greenhouse" alt="Greenhouse">
+            <h3>Greenhouse Kit</h3>
+            <p>Description: Perfect for growing crops in controlled conditions.</p>
+            <p>Company: GreenBuild</p>
+            <p class="price">₹25,000</p>
+            <button>Buy</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200.png?text=Mulch" alt="Mulch">
+            <h3>Mulch for Crops</h3>
+            <p>Description: Protect your crops from extreme weather.</p>
+            <p>Company: EcoCrop</p>
+            <p class="price">₹300</p>
+            <button>Buy</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200.png?text=Compost+Bin" alt="Compost Bin">
+            <h3>Compost Bin</h3>
+            <p>Description: Efficient composting of farm waste.</p>
+            <p>Company: GreenBin</p>
+            <p class="price">₹1,500</p>
+            <button>Buy</button>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200.png?text=Solar+Pump" alt="Solar Water Pump">
+            <h3>Solar Water Pump</h3>
+            <p>Description: Solar-powered pump for irrigation.</p>
+            <p>Company: SunFarm</p>
+            <p class="price">₹12,000</p>
+            <button>Buy</button>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Farmer Innovation Management
+    </footer>
+</body>
+</html>
